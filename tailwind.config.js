@@ -9,7 +9,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        ubunto: ["Ubuntu", "sans-serif"],
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
