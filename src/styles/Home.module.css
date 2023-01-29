@@ -1,17 +1,17 @@
 .bg_img {
   background: url(./../assests/Background.png) no-repeat center / cover;
-  width: 100%;
+  max-width: 100%;
   padding: 20px 0 100px;
 }
 
 .card {
+  box-sizing: border-box;
   background: white;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 30px;
   clip-path: polygon(0% 0%, 100% 0, 100% 85%, 80% 100%, 0% 100%);
   transition: all linear 0.4s;
-  box-sizing: border-box;
 }
 
 .card:hover {
@@ -23,11 +23,11 @@
 }
 
 .card .cardImgbox {
+  box-sizing: border-box;
   background: rgb(222, 214, 214);
   padding: 10px;
   border-radius: 10px;
   transition: all linear 0.4s;
-  box-sizing: border-box;
 }
 
 .card:hover .cardImgbox {
@@ -37,8 +37,8 @@
 .card .img {
   transition: all linear 0.4s;
   padding: 0;
-  width: 200px;
-  height: 200px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .card:hover .img {
