@@ -8,7 +8,6 @@ import Link from "next/link";
 
 const SingleCard = ({ data }) => {
   const router = useRouter();
-  const { id } = router.query;
 
   const { types } = data || {};
 
@@ -16,7 +15,7 @@ const SingleCard = ({ data }) => {
     <div className="w-[100%] flex justify-between">
       <Image className="h-screen" src={sideImg} width="" height="" alt="" />
 
-      <div className="my-[40px] w-[1200px] m-auto">
+      {/* <div className="my-[40px] w-[1200px] m-auto">
         <div className="flex justify-center">
           <Image src={logo} width="200" height="200" alt="" />
         </div>
@@ -149,7 +148,7 @@ const SingleCard = ({ data }) => {
             </button>
           </Link>
         </div>
-      </div>
+      </div> */}
       <Image className="h-screen" src={sideImg} width="" height="" alt="" />
     </div>
   );
