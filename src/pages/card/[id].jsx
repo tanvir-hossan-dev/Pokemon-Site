@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import sideImg from "./../../assests/Left.png";
-import logo from "./../../assests/logo.png";
+import logo from "./../../assests/Logo.png";
 import Image from "next/image";
 import axios from "axios";
 import { AiFillHome } from "react-icons/ai";
