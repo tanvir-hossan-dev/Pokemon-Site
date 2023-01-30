@@ -15,7 +15,7 @@ const SingleCard = ({ data }) => {
     <div className="w-[100%] flex justify-between">
       <Image className="h-screen" src={sideImg} width="" height="" alt="" />
 
-      {/* <div className="my-[40px] w-[1200px] m-auto">
+      <div className="my-[40px] w-[1200px] m-auto">
         <div className="flex justify-center">
           <Image src={logo} width="200" height="200" alt="" />
         </div>
@@ -56,7 +56,7 @@ const SingleCard = ({ data }) => {
             />
           </div>
           <div>
-            <div className="mb-2">
+            {/* <div className="mb-2">
               <h3 className="font-ubunto font-medium text-[22px]">Type</h3>
               <div className="mt-2">
                 {data?.types[0]?.type?.name === "grass" && (
@@ -98,7 +98,7 @@ const SingleCard = ({ data }) => {
                   </button>
                 )}
               </div>
-            </div>
+            </div> */}
             <div className="mb-2">
               <h3 className="font-ubunto font-medium text-[22px]">Weaknesses</h3>
               <div className="mt-2">
@@ -148,7 +148,7 @@ const SingleCard = ({ data }) => {
             </button>
           </Link>
         </div>
-      </div> */}
+      </div>
       <Image className="h-screen" src={sideImg} width="" height="" alt="" />
     </div>
   );
