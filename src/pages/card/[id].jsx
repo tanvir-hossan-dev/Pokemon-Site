@@ -10,7 +10,7 @@ const SingleCard = ({ data }) => {
   const router = useRouter();
   const { id } = router.query;
 
-  const { types } = data || [];
+  const { types } = data || {};
 
   return (
     <div className="w-[100%] flex justify-between">
@@ -60,28 +60,28 @@ const SingleCard = ({ data }) => {
             <div className="mb-2">
               <h3 className="font-ubunto font-medium text-[22px]">Type</h3>
               <div className="mt-2">
-                {types[0]?.type?.name === "grass" && (
+                {data?.types[0]?.type?.name === "grass" && (
                   <button
                     className={` py-[3px] px-[12px] rounded-md text-white bg-green-400 capitalize  mr-4 font-ubunto font-normal`}
                   >
                     {types[0]?.type?.name}
                   </button>
                 )}
-                {types[0]?.type?.name === "fire" && (
+                {data?.types[0]?.type?.name === "fire" && (
                   <button
                     className={` py-[3px] px-[12px] rounded-md text-white bg-red-400 capitalize  mr-4 font-ubunto font-normal`}
                   >
                     {types[0]?.type?.name}
                   </button>
                 )}
-                {types[0]?.type?.name === "water" && (
+                {data?.types[0]?.type?.name === "water" && (
                   <button
                     className={` py-[3px] px-[12px] rounded-md text-white bg-blue-500 capitalize  mr-4 font-ubunto font-normal`}
                   >
                     {types[0]?.type?.name}
                   </button>
                 )}
-                {types[1]?.type?.name === "flying" && (
+                {data?.types[1]?.type?.name === "flying" && (
                   <button
                     style={{
                       background: "linear-gradient(to bottom, #93C6E7, #EAE0DA)",
@@ -91,7 +91,7 @@ const SingleCard = ({ data }) => {
                     {types[1]?.type?.name}
                   </button>
                 )}
-                {types[1]?.type?.name === "poison" && (
+                {data?.types[1]?.type?.name === "poison" && (
                   <button
                     className={` py-[3px] px-[12px] rounded-md text-white bg-[#c051a8] capitalize  mr-4 font-ubunto font-normal`}
                   >
