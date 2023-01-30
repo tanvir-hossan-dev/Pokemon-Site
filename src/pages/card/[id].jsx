@@ -3,7 +3,8 @@ import sideImg from "./../../assests/Left.png";
 import logo from "./../../assests/logo.png";
 import Image from "next/image";
 import axios from "axios";
-import styles from "./../../styles/Home.module.css";
+import { AiFillHome } from "react-icons/ai";
+import Link from "next/link";
 
 const SingleCard = ({ data }) => {
   const router = useRouter();
@@ -11,17 +12,15 @@ const SingleCard = ({ data }) => {
 
   const { types } = data || [];
 
-  console.log(data);
-
   return (
     <div className="w-[100%] flex justify-between">
       <Image className="h-screen" src={sideImg} width="" height="" alt="" />
 
-      <div className="my-[50px] w-[1200px] m-auto">
+      <div className="my-[40px] w-[1200px] m-auto">
         <div className="flex justify-center">
           <Image src={logo} width="200" height="200" alt="" />
         </div>
-        <div className="mt-[50px] grid grid-cols-3 gap-6 lg:grid-cols-3 lg:gap-6 md:grid-cols-2 md:gap-4 sm:grid-cols-1 sm:gap-4">
+        <div className="mt-[30px] grid grid-cols-3 gap-6 lg:grid-cols-3 lg:gap-6 md:grid-cols-2 md:gap-4 sm:grid-cols-1 sm:gap-4">
           <div>
             <h2 className="mb-2 text-blue-500 capitalize text-[42px] font-ubunto font-bold">{data?.name}</h2>
             <p className="mb-4  text-[18px] font-ubunto font-normal">
@@ -103,46 +102,33 @@ const SingleCard = ({ data }) => {
             </div>
             <div className="mb-2">
               <h3 className="font-ubunto font-medium text-[22px]">Weaknesses</h3>
-              {/* <div className="mt-2">
-                {types[0]?.type?.name === "grass" && (
-                  <button
-                    className={` py-[3px] px-[12px] rounded-md text-white bg-green-400 capitalize  mr-4 font-ubunto font-normal`}
-                  >
-                    {types[0]?.type?.name}
-                  </button>
-                )}
-                {types[0]?.type?.name === "fire" && (
-                  <button
-                    className={` py-[3px] px-[12px] rounded-md text-white bg-red-400 capitalize  mr-4 font-ubunto font-normal`}
-                  >
-                    {types[0]?.type?.name}
-                  </button>
-                )}
-                {types[0]?.type?.name === "water" && (
-                  <button
-                    className={` py-[3px] px-[12px] rounded-md text-white bg-blue-500 capitalize  mr-4 font-ubunto font-normal`}
-                  >
-                    {types[0]?.type?.name}
-                  </button>
-                )}
-                {types[1]?.type?.name === "flying" && (
-                  <button
-                    style={{
-                      background: "linear-gradient(to bottom, #93C6E7, #EAE0DA)",
-                    }}
-                    className={` py-[3px] px-[12px] rounded-md text-white  capitalize  mr-4 font-ubunto font-normal`}
-                  >
-                    {types[1]?.type?.name}
-                  </button>
-                )}
-                {types[1]?.type?.name === "poison" && (
-                  <button
-                    className={` py-[3px] px-[12px] rounded-md text-white bg-[#c051a8] capitalize  mr-4 font-ubunto font-normal`}
-                  >
-                    {types[1]?.type?.name}
-                  </button>
-                )}
-              </div> */}
+              <div className="mt-2">
+                <button
+                  className={` py-[3px] px-[12px] rounded-md text-white bg-red-400 capitalize  mr-4 font-ubunto font-normal`}
+                >
+                  fire
+                </button>
+                <button
+                  className={` py-[3px] px-[12px] rounded-md text-white bg-[#cf67b8] capitalize  mr-4 font-ubunto font-normal`}
+                >
+                  psychic
+                </button>
+
+                <button
+                  style={{
+                    background: "linear-gradient(to bottom, #93C6E7, #EAE0DA)",
+                  }}
+                  className={` py-[3px] px-[12px] rounded-md text-white  capitalize  mr-4 font-ubunto font-normal`}
+                >
+                  flying
+                </button>
+
+                <button
+                  className={` py-[3px] px-[12px] rounded-md text-white bg-blue-500 capitalize  mr-4 font-ubunto font-normal`}
+                >
+                  ice
+                </button>
+              </div>
             </div>
             <div className="mb-2">
               <h3 className="font-ubunto font-medium text-[22px] mb-4">Status</h3>
@@ -154,6 +140,14 @@ const SingleCard = ({ data }) => {
               ))}
             </div>
           </div>
+        </div>
+        <div className="flex justify-center">
+          <Link href="/">
+            <button className="flex items-center  bg-yellow-400 text-[20px] text-white font-ubunto font-normal border-[6px] border-solid border-blue-500 rounded-sm  py-3 px-10">
+              <AiFillHome className="mr-4" />
+              Back To Home page
+            </button>
+          </Link>
         </div>
       </div>
       <Image className="h-screen" src={sideImg} width="" height="" alt="" />
