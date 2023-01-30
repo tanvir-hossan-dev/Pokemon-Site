@@ -92,7 +92,7 @@ export default function Home({ data }) {
         </div>
       </section>
       <section className="max-w-[100%] flex justify-between">
-        <Image className="h-screen" src={sideImg} width="" height="" alt="" />
+        <Image className="h-screen" src={sideImg} width="auto" height="auto" alt="" />
         <div className="my-[100px] max-w-[1200px] mx-auto">
           <div className="flex justify-center">
             <div className={`w-[400px]  ${styles.content_heading}`}>
@@ -123,8 +123,8 @@ export default function Home({ data }) {
                 </div>
                 <div className="mb-2 w-1/4  ">
                   {" "}
-                  <Image className="max-w-full h-auto mb-4" src={Img3} alt="" />
-                  <Image className="max-w-full h-auto" src={Img2} alt="" />
+                  <Image className="max-w-full h-auto mb-4" src={Img3} width="auto" height="auto" alt="" />
+                  <Image className="max-w-full h-auto" src={Img2} width="auto" height="auto" alt="" />
                 </div>
               </div>
               <p>
@@ -139,14 +139,14 @@ export default function Home({ data }) {
                 ad harum id perferendis quaerat quod est, iste eos possimus? Obcaecati animi tempora fugit.
               </p>
               <div className="flex justify-between gap-4 mb-4">
-                <Image className="w-1/4 " src={Img5} alt="" />
+                <Image className="w-1/4 " width="auto" height="auto" src={Img5} alt="" />
                 <p className="w-3/4">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere perspiciatis, quos aliquam vero
                   doloribus error eos animi voluptate sint veritatis.
                 </p>
               </div>
               <div className="flex justify-between gap-4 mb-2">
-                <Image className="w-1/4" src={Img1} alt="" />
+                <Image className="w-1/4" width="auto" height="auto" src={Img1} alt="" />
                 <p className="w-3/4">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere perspiciatis, quos aliquam vero
                   doloribus error eos animi voluptate sint veritatis.
@@ -160,7 +160,7 @@ export default function Home({ data }) {
             </div>
           </div>
         </div>
-        <Image className="h-screen " src={sideImg} width="" height="" alt="" />
+        <Image className="h-screen " src={sideImg} width="auto" height="auto" alt="" />
       </section>
     </>
   );
