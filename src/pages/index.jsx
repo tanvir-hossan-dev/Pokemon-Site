@@ -44,27 +44,27 @@ export default function Home({ data }) {
                         </div>
                       </div>
                       <div>
-                        <h2 className={`${styles.cardTitle} mt-2 ml-2 font-ubunto font-medium capitalize`}>
+                        <h2 className={`${styles.cardTitle} mt-2  ml-2 font-ubunto font-medium capitalize`}>
                           {item.species.name}
                         </h2>
                         <div className="mt-2">
                           {types[0]?.type?.name === "grass" && (
                             <button
-                              className={` py-[3px] px-[12px] rounded-md text-white bg-green-400 capitalize  mr-4 font-ubunto font-normal`}
+                              className={` py-[3px] px-[12px] mb-2 rounded-md text-white bg-green-400 capitalize  mr-4 font-ubunto font-normal`}
                             >
                               {types[0]?.type?.name}
                             </button>
                           )}
                           {types[0]?.type?.name === "fire" && (
                             <button
-                              className={` py-[3px] px-[12px] rounded-md text-white bg-red-400 capitalize  mr-4 font-ubunto font-normal`}
+                              className={` py-[3px] px-[12px] mb-2 rounded-md text-white bg-red-400 capitalize  mr-4 font-ubunto font-normal`}
                             >
                               {types[0]?.type?.name}
                             </button>
                           )}
                           {types[0]?.type?.name === "water" && (
                             <button
-                              className={` py-[3px] px-[12px] rounded-md text-white bg-blue-500 capitalize  mr-4 font-ubunto font-normal`}
+                              className={` py-[3px] px-[12px] mb-2 rounded-md text-white bg-blue-500 capitalize  mr-4 font-ubunto font-normal`}
                             >
                               {types[0]?.type?.name}
                             </button>
@@ -74,14 +74,14 @@ export default function Home({ data }) {
                               style={{
                                 background: "linear-gradient(to bottom, #93C6E7, #EAE0DA)",
                               }}
-                              className={` py-[3px] px-[12px] rounded-md text-white  capitalize  mr-4 font-ubunto font-normal`}
+                              className={` py-[3px] px-[12px] mb-2 rounded-md text-white  capitalize  mr-4 font-ubunto font-normal`}
                             >
                               {types[1]?.type?.name}
                             </button>
                           )}
                           {types[1]?.type?.name === "poison" && (
                             <button
-                              className={` py-[3px] px-[12px] rounded-md text-white bg-[#c051a8] capitalize  mr-4 font-ubunto font-normal`}
+                              className={` py-[3px] px-[12px] mb-2 rounded-md text-white bg-[#c051a8] capitalize  mr-4 font-ubunto font-normal`}
                             >
                               {types[1]?.type?.name}
                             </button>
@@ -96,12 +96,12 @@ export default function Home({ data }) {
           </div>
         </div>
       </section>
-      <section className="max-w-[100%] flex justify-between">
+      <section className="py-[100px] max-w-[100%] flex justify-between">
         <Image className="h-screen hidden lg:block md:hidden" src={sideImg} width="auto" height="auto" alt="" />
-        <div className="my-[100px] max-w-[1200px] px-[10px] mx-auto">
-          <div className="flex justify-center md:flex-col sm:flex-col">
-            <div className={`w-[400px]  ${styles.content_heading}`}>
-              <h1 className="text-center font-ubunto text-[32px] font-bold text-sky-700">
+        <div className=" max-w-[1200px] px-[10px] mx-auto">
+          <div className="flex justify-center ">
+            <div className={`w-[200px] lg:w-[400px]  ${styles.content_heading}`}>
+              <h1 className="text-center font-ubunto text-[20px]  lg:text-[32px] font-bold text-sky-700">
                 Ash & Pikacu Arrive in Pokemen Universe
               </h1>
             </div>
@@ -110,18 +110,17 @@ export default function Home({ data }) {
             <div>
               <div className="flex justify-between gap-4">
                 <div className="w-3/4">
-                  <p className="mb-2">
+                  <p className="mb-2 font-ubunto font-normal text-[12px] lg:text-[18px] lg-[14px]">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste aspernatur minus nesciunt reiciendis
                     dolores, tenetur eos nisi perspiciatis. A inventore vel, dolor veniam rerum quibusdam?
                   </p>
-                  <div className="flex justify-between gap-4 mb-2">
-                    <p className="w-2/3">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam saepe laudantium, sint facilis
-                      molestiae esse odit dolorem ab amet recusandae!
+                  <div className="flex justify-between  gap-4 mb-2">
+                    <p className="w-2/3 font-ubunto font-normal text-[12px] lg:text-[18px] lg-[14px]">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     </p>
-                    <Image className="w-1/3" src={Img4} width="200px" height="200px" alt="" />
+                    <Image className="w-1/3 h-auto max-w-full" src={Img4} width="" height="20px" alt="" />
                   </div>
-                  <p>
+                  <p className="font-ubunto font-normal text-[12px] lg:text-[18px] lg-[14px]">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit voluptates totam unde eos, neque quia
                     nihil quam rerum, error animi nobis amet earum tempora in.
                   </p>
@@ -132,32 +131,32 @@ export default function Home({ data }) {
                   <Image className="max-w-full h-auto" src={Img2} width="auto" height="auto" alt="" />
                 </div>
               </div>
-              <p>
+              <p className="font-ubunto font-normal text-[12px] lg:text-[18px] lg-[14px]">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ipsum voluptatibus ut distinctio
                 officia commodi, sint quos modi molestias quis. Aspernatur repellendus exercitationem sed itaque dolorem
                 ipsa et corporis, natus impedit sapiente, asperiores, harum quibusdam. Labore esse omnis expedita quo!
               </p>
             </div>
             <div>
-              <p className="mb-2">
+              <p className="mb-2 font-ubunto font-normal text-[12px] lg:text-[18px] lg-[14px]">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam hic porro blanditiis deleniti debitis
                 ad harum id perferendis quaerat quod est, iste eos possimus? Obcaecati animi tempora fugit.
               </p>
               <div className="flex justify-between gap-4 mb-4">
                 <Image className="w-1/4 " width="auto" height="auto" src={Img5} alt="" />
-                <p className="w-3/4">
+                <p className="w-3/4 font-ubunto font-normal text-[12px] lg:text-[18px] lg-[14px]">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere perspiciatis, quos aliquam vero
                   doloribus error eos animi voluptate sint veritatis.
                 </p>
               </div>
               <div className="flex justify-between gap-4 mb-2">
                 <Image className="w-1/4" width="auto" height="auto" src={Img1} alt="" />
-                <p className="w-3/4">
+                <p className="w-3/4 font-ubunto font-normal text-[12px] lg:text-[18px] lg-[14px]">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere perspiciatis, quos aliquam vero
                   doloribus error eos animi voluptate sint veritatis.
                 </p>
               </div>
-              <p>
+              <p className="font-ubunto font-normal text-[12px] lg:text-[18px] lg-[14px]">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum voluptatem iusto fugiat reprehenderit
                 quas impedit? Officiis error totam accusamus perspiciatis, ullam repudiandae adipisci a atque officia
                 iusto rerum modi beatae?

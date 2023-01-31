@@ -15,7 +15,7 @@ const SingleCard = ({ data }) => {
     <div className="w-[100%] flex justify-between">
       <Image className="h-screen hidden lg:block md:hidden" src={sideImg} width="" height="" alt="" />
 
-      <div className="my-[40px] w-[1200px] p-[10px] md:p-[20px] sm:p[20px] m-auto">
+      <div className="py-[40px] w-[1200px] p-[30px] md:p-[20px] sm:p[20px] m-auto">
         <div className="flex justify-center">
           <Image src={logo} width="200" height="200" alt="" />
         </div>
