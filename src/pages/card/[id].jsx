@@ -56,7 +56,7 @@ const SingleCard = ({ data }) => {
             />
           </div>
           <div>
-            {/* <div className="mb-2">
+            <div className="mb-2">
               <h3 className="font-ubunto font-medium text-[22px]">Type</h3>
               <div className="mt-2">
                 {data?.types[0]?.type?.name === "grass" && (
@@ -98,7 +98,7 @@ const SingleCard = ({ data }) => {
                   </button>
                 )}
               </div>
-            </div> */}
+            </div>
             <div className="mb-2">
               <h3 className="font-ubunto font-medium text-[22px]">Weaknesses</h3>
               <div className="mt-2">

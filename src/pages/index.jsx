@@ -12,6 +12,7 @@ import Link from "next/link";
 import Head from "next/head";
 
 export default function Home({ data }) {
+  console.log(data);
   return (
     <>
       <div>
@@ -167,11 +168,35 @@ export default function Home({ data }) {
 }
 
 export const getServerSideProps = async () => {
-  const res = await axios.get("https://pokeapi.co/api/v2/pokemon");
-  const array = res.data.results.slice(0, 8);
+  const gqlQuery = `query pokemons($limit: Int, $offset: Int) {
+  pokemons(limit: $limit, offset: $offset) {
+    results {
+      url
+      name
+      image
+    }
+  }
+}`;
 
-  const data = await Promise.all(
-    array.map(async (item) => {
+  const gqlVariables = {
+    limit: 8,
+    offset: 0,
+  };
+
+  const res = await fetch("https://graphql-pokeapi.graphcdn.app/", {
+    credentials: "omit",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      query: gqlQuery,
+      variables: gqlVariables,
+    }),
+    method: "POST",
+  });
+
+  const { data } = await res.json();
+
+  const data1 = await Promise.all(
+    data?.pokemons?.results?.map(async (item) => {
       const { data } = await axios.get(item.url);
 
       return { ...data };
@@ -180,7 +205,7 @@ export const getServerSideProps = async () => {
 
   return {
     props: {
-      data: data,
+      data: data1,
     },
   };
 };
