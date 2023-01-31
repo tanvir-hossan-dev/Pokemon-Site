@@ -25,6 +25,7 @@ export default function Home({ data }) {
             <div className="flex justify-center">
               <Image src={logo} width="200" height="200" alt="" />
             </div>
+
             <div className="mt-[100px] grid grid-cols-2 gap-2 lg:grid-cols-4 lg:gap-6 md:grid-cols-2 md:gap-2 ">
               {data?.map((item) => {
                 const { types } = item;

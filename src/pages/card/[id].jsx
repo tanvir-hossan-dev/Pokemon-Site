@@ -20,7 +20,7 @@ const SingleCard = ({ data }) => {
           <Image src={logo} width="200" height="200" alt="" />
         </div>
         <div className="mt-[30px] grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-6 md:grid-cols-2 md:gap-4 ">
-          <div>
+          <div className="order-2 lg:order-2 md:order-1">
             <h2 className="mb-2 text-blue-500 capitalize text-[42px] font-ubunto font-bold">{data?.name}</h2>
             <p className="mb-4  text-[18px] font-ubunto font-normal">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore accusantium nostrum distinctio
@@ -48,14 +48,14 @@ const SingleCard = ({ data }) => {
               </div>
             </div>
           </div>
-          <div>
+          <div className="order-1 lg:order-2 md:order-2">
             <img
               className="w-full hover:scale-125 transition-all duration-300 "
               src={data?.sprites?.front_default}
               alt=""
             />
           </div>
-          <div>
+          <div className="order-3 lg:order-3 md:order-3">
             <div className="mb-2">
               <h3 className="font-ubunto font-medium text-[22px]">Type</h3>
               <div className="mt-2">
