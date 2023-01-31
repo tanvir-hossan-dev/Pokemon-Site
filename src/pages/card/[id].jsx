@@ -13,13 +13,13 @@ const SingleCard = ({ data }) => {
 
   return (
     <div className="w-[100%] flex justify-between">
-      <Image className="h-screen" src={sideImg} width="" height="" alt="" />
+      <Image className="h-screen hidden lg:block md:hidden" src={sideImg} width="" height="" alt="" />
 
-      <div className="my-[40px] w-[1200px] m-auto">
+      <div className="my-[40px] w-[1200px] p-[10px] md:p-[20px] sm:p[20px] m-auto">
         <div className="flex justify-center">
           <Image src={logo} width="200" height="200" alt="" />
         </div>
-        <div className="mt-[30px] grid grid-cols-3 gap-6 lg:grid-cols-3 lg:gap-6 md:grid-cols-2 md:gap-4 sm:grid-cols-1 sm:gap-4">
+        <div className="mt-[30px] grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-6 md:grid-cols-2 md:gap-4 ">
           <div>
             <h2 className="mb-2 text-blue-500 capitalize text-[42px] font-ubunto font-bold">{data?.name}</h2>
             <p className="mb-4  text-[18px] font-ubunto font-normal">
@@ -140,7 +140,7 @@ const SingleCard = ({ data }) => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-6 lg:mt-4 md:mt-4 ">
           <Link href="/">
             <button className="flex items-center  bg-yellow-400 text-[20px] text-white font-ubunto font-normal border-[6px] border-solid border-blue-500 rounded-sm  py-3 px-10">
               <AiFillHome className="mr-4" />
@@ -149,7 +149,7 @@ const SingleCard = ({ data }) => {
           </Link>
         </div>
       </div>
-      <Image className="h-screen" src={sideImg} width="" height="" alt="" />
+      <Image className="h-screen hidden lg:block md:hidden" src={sideImg} width="" height="" alt="" />
     </div>
   );
 };

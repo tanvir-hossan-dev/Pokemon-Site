@@ -12,7 +12,6 @@ import Link from "next/link";
 import Head from "next/head";
 
 export default function Home({ data }) {
-  console.log(data);
   return (
     <>
       <div>
@@ -22,7 +21,7 @@ export default function Home({ data }) {
       </div>
       <section>
         <div className={styles.bg_img}>
-          <div className="max-w-[1200px] mx-auto">
+          <div className="max-w-[1200px] mx-auto px-[10px]">
             <div className="flex justify-center">
               <Image src={logo} width="200" height="200" alt="" />
             </div>
@@ -36,7 +35,12 @@ export default function Home({ data }) {
                       <div className={styles.cardImgbox}>
                         <p className=" font-ubunto font-normal">#010</p>
                         <div className="flex justify-center">
-                          <img className={styles.img} src={item.sprites.front_default} alt="" />
+                          <img
+                            className={`${styles.img} max-h-full max-w-full  lg:h-[200px] md:max-h-[200px] `}
+                            clas
+                            src={item.sprites.front_default}
+                            alt=""
+                          />
                         </div>
                       </div>
                       <div>
@@ -93,9 +97,9 @@ export default function Home({ data }) {
         </div>
       </section>
       <section className="max-w-[100%] flex justify-between">
-        <Image className="h-screen" src={sideImg} width="auto" height="auto" alt="" />
-        <div className="my-[100px] max-w-[1200px] mx-auto">
-          <div className="flex justify-center">
+        <Image className="h-screen hidden lg:block md:hidden" src={sideImg} width="auto" height="auto" alt="" />
+        <div className="my-[100px] max-w-[1200px] px-[10px] mx-auto">
+          <div className="flex justify-center md:flex-col sm:flex-col">
             <div className={`w-[400px]  ${styles.content_heading}`}>
               <h1 className="text-center font-ubunto text-[32px] font-bold text-sky-700">
                 Ash & Pikacu Arrive in Pokemen Universe
@@ -161,7 +165,7 @@ export default function Home({ data }) {
             </div>
           </div>
         </div>
-        <Image className="h-screen " src={sideImg} width="auto" height="auto" alt="" />
+        <Image className="h-screen hidden lg:block md:hidden" src={sideImg} width="auto" height="auto" alt="" />
       </section>
     </>
   );

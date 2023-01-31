@@ -37,8 +37,6 @@
 .card .img {
   transition: all linear 0.4s;
   padding: 0;
-  max-width: 200px;
-  height: 200px;
 }
 
 .card:hover .img {
